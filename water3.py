@@ -18,9 +18,8 @@ load_dotenv()
 # Set up OpenAI API key
 openai.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Set up Google Maps API key
-google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
-openweathermap_api_key = os.getenv("OPENWEATHERMAP_API_KEY")
-
+google_maps_api_key = "AIzaSyBwJoBHpsJ5K20tHEF6G5NsVZ0ARbeeSAw"
+openweathermap_api_key = "15bde77f4e69ac6a9edddcf25fb3873d"
 # Custom CSS for background sidebar
 st.markdown("""
     <style>
@@ -40,7 +39,7 @@ st.markdown("""
 
 # Add logo to the sidebar
 logo_path = "water logo.png"  # Update with the path to your logo file
-st.sidebar.image(logo_path, use_column_width=True)
+st.sidebar.image(logo_path, use_container_width =True)
 import base64
 
 def set_background_image(image_path):
@@ -207,7 +206,7 @@ def categorize_issue(description):
 
 # Function to get geocoding data from Google Maps
 def get_geocoding_data_google(city):
-    url = "https://maps.googleapis.com/maps/api/geocode/json"
+    url = "https://maps.googleapis.com/maps/api/geocode/json?"
     params = {
         "address": city,
         "key": google_maps_api_key
