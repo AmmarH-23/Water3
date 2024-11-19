@@ -1,1 +1,13 @@
-
+openai
+streamlit
+openai
+Pillow
+matplotlib
+folium
+streamlit-folium
+requests
+base64
+load_dotenv
+Image
+datetime
+os
