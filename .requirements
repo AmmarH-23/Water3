@@ -2,7 +2,7 @@ openai
 streamlit
 openai
 Pillow
-matplotlib.pyplot
+matplotlib
 folium
 streamlit-folium
 requests
