@@ -1,7 +1,6 @@
 from PIL import Image
 from datetime import datetime
 from streamlit.components.v1 import html
-import matplotlib.pyplot as plt
 import folium
 from streamlit_folium import folium_static
 import secrets
@@ -11,6 +10,7 @@ import requests
 from dotenv import load_dotenv
 import openai
 import base64
+import matplotlib.pyplot as plt
 
 # Load environment variables from .env file
 load_dotenv()
@@ -132,10 +132,10 @@ def generate_usage_chart(user_usage, avg_usage, city):
             height = bar.get_height()
             ax.text(bar.get_x() + bar.get_width() / 2, height + 5, f'{height:.0f}', ha='center', va='bottom')
 
-        ax.set_title("Water Usage Comparison", fontsize=16)
+        ax.set_title("Water Usage Comparison", fontsize=14)
         ax.set_ylabel("Gallons", fontsize=12)
         ax.set_xlabel("Category", fontsize=12)
-        ax.set_ylim(0, max(values) + 20)
+        ax.set_ylim(0, max(values) + 10)
 
         return fig
     except Exception as e:

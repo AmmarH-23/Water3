@@ -2,7 +2,6 @@ openai
 streamlit
 openai
 Pillow
-matplotlib.pyplot
 folium
 streamlit-folium
 requests
@@ -11,3 +10,4 @@ load_dotenv
 Image
 datetime
 os
+plt
