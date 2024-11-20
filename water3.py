@@ -17,7 +17,7 @@ import base64
 load_dotenv()
 
 # Set up OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 # Set up Google Maps API key
 google_maps_api_key = "AIzaSyBwJoBHpsJ5K20tHEF6G5NsVZ0ARbeeSAw"
 openweathermap_api_key = "15bde77f4e69ac6a9edddcf25fb3873d"
