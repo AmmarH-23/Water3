@@ -1,7 +1,7 @@
 from PIL import Image
 from datetime import datetime
 from streamlit.components.v1 import html
-import folium
+
 from streamlit_folium import folium_static
 import secrets
 import streamlit as st
@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 import openai
 import base64
 import matplotlib.pyplot as plt
+import folium
 
 # Load environment variables from .env file
 load_dotenv()
