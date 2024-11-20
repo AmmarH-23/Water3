@@ -101,7 +101,7 @@ def get_average_water_usage(city):
         f"If county-level data is also unavailable, provide an estimate for the state of California, ensuring the response is as localized as possible."
     )
     try:
-        response = openai.ChatCompletions.create(
+        response = openai.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
@@ -156,7 +156,7 @@ def generate_water_usage_insights(user_usage, avg_usage, city, garden_size, plan
     )
     try:
         # Use OpenAI API to generate insights
-        response = openai.ChatCompletion.create(
+        response = openai.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful water conservation expert."},
@@ -193,7 +193,7 @@ def display_water_usage_insights():
 def categorize_issue(description):
     prompt = f"You are an assistant that categorizes community-reported water issues. Please categorize the following issue: {description}"
     try:
-        response = openai.ChatCompletion.create(
+        response = openai.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
@@ -365,7 +365,7 @@ def recommend_irrigation_schedule(weather_data, garden_size, plant_types):
     )
     try:
         # Use OpenAI API to generate irrigation recommendations
-        response = openai.ChatCompletion.create(
+        response = openai.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful irrigation expert."},
