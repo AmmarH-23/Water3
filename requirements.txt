@@ -4,5 +4,4 @@ Pillow
 folium
 streamlit-folium
 requests
-base64
 python-dotenv
