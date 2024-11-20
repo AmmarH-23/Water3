@@ -39,7 +39,7 @@ st.markdown("""
 
 # Add logo to the sidebar
 logo_path = "water logo.png"  # Update with the path to your logo file
-st.sidebar.image(logo_path, use_container_width =True)
+st.sidebar.image(logo_path, use_column_width =True)
 import base64
 
 def set_background_image(image_path):
