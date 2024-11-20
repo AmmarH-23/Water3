@@ -6,4 +6,3 @@ streamlit-folium
 requests
 python-dotenv
 matplotlib
-secrets
